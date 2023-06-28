@@ -393,7 +393,6 @@ export class PdsDiagramHelper {
                     break;
     
                 case EProcessStepTemplateType.Decision:
-                    debugger;
                     let nodeProperties = <DecisionStepModel>(serverNode.template);
                     if (nodeProperties && nodeProperties.branches) {
                         for (let i = 0; i < nodeProperties?.branches.length; i++) {
@@ -1345,7 +1344,6 @@ export class PdsDiagramHelper {
         edgeDataSourceToBeUpdated: INodeEdgeOperation[], nodeData: NodeDataDto[],
         edgeData: EdgeDataDto[], isIntersectedDropHere: boolean,
         intersectPosition?: { left: boolean; above: boolean; }) {
-        debugger;
         let parentNode = nodeData.find(e => e.id === values.parentId);
         if (parentNode) {
             if (!isIntersectedDropHere && parentNode.type !== 'cs-start-process'
@@ -1396,7 +1394,6 @@ export class PdsDiagramHelper {
     public static updateNodeParentAndAddEdge(values: NodeDataDto, edgeDataSourceToBeUpdated: INodeEdgeOperation[],
         nodeDataSourceToBeUpdated: INodeEdgeOperation[], containerData: NodeDataDto[], nodeData: NodeDataDto[], edgeData: EdgeDataDto[]) {
         // find parentNode
-        debugger;
         let parentNode = nodeData.find(e => e.id === values.parentId);
         if (parentNode) {
 
